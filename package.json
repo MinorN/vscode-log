@@ -1,0 +1,71 @@
+{
+  "publisher": "MinorN",
+  "name": "front-quick-log",
+  "displayName": "front-quick-log",
+  "description": "you can use the Tab key to quickly log,just like xxx.log => console.log('xxx', xxx) ,it's cool!",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.78.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": ["onStartupFinished"],
+  "main": "./output/extension.js",
+  "contributes": {
+    "keybindings": [
+      {
+        "command": "extension.myTabConsoleLog",
+        "title": "front-quick-log",
+        "when": "editorTextFocus",
+        "key": "ctrl+tab"
+      }
+    ],
+    "languages": [
+      {
+        "id": "vue",
+        "extensions": [
+          ".vue"
+        ]
+      },
+      {
+        "id": "javascript",
+        "aliases": [
+          "js",
+          "jsx"
+        ],
+        "extensions": [
+          ".js",
+          ".jsx"
+        ]
+      },
+      {
+        "id": "typescript",
+        "aliases": [
+          "ts",
+          "tsx"
+        ],
+        "extensions": [
+          ".ts",
+          ".tsx"
+        ]
+      }
+    ]
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "node ./test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.78.0",
+    "@types/glob": "^8.1.0",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "16.x",
+    "eslint": "^8.39.0",
+    "glob": "^8.1.0",
+    "mocha": "^10.2.0",
+    "typescript": "^5.0.4",
+    "@vscode/test-electron": "^2.3.0"
+  }
+}
