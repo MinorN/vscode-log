@@ -3,7 +3,7 @@
   "name": "front-quick-log",
   "displayName": "front-quick-log",
   "description": "you can use the Tab key to quickly log,just like xxx.log => console.log('xxx', xxx) ,it's cool!",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "engines": {
     "vscode": "^1.78.0"
   },
